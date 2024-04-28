@@ -43,7 +43,7 @@ function Header() {
   return (
 
     <div className="one" >
-      <div className='admin-container'>
+      <div className='admin-container' style={{ display: isVisible ? 'flex' : 'none' }}>
       <h3>Select a File source</h3>
       <div className='input-box'>
         <div className='select-field'>

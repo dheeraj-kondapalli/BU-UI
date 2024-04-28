@@ -7,7 +7,6 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
   const data = [
     { id: 1, title: 'Available Columns', items: dragColumn },
     { id: 2, title: 'Filtered Columns', items: [] }
-    // { id: 3, title: 'Final Columns', items: [] }
   ];
 
   const [renderSecondColumn, setRenderSecondColumn] = useState(false);
@@ -102,6 +101,23 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
               </ul>
           </div>
         ))}
+        <div className='column' style={{ display: (!renderSecondColumn) ? 'none' : 'flex' }}>
+          <h3>Final Column</h3>
+          <ul className='lists'>
+            <label htmlFor='name'>Column:</label>
+            <input id='name' placeholder='Name'/>
+            <input id='value' placeholder='Value'/>
+            <label htmlFor='name'>Column:</label>
+            <input id='name' placeholder='Name'/>
+            <input id='value' placeholder='Value'/>
+            <label htmlFor='name'>Column:</label>
+            <input id='name' placeholder='Name'/>
+            <input id='value' placeholder='Value'/>
+            <label htmlFor='name'>Column:</label>
+            <input id='name' placeholder='Name'/>
+            <input id='value' placeholder='Value'/>
+          </ul>
+        </div>
       </div>
       {!renderSecondColumn && (
         <button onClick={handleButtonClick}>all good</button>

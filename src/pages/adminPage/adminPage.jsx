@@ -1,4 +1,3 @@
-// AdminPage.js
 import React, { useState } from 'react';
 import DataTable from 'react-data-table-component';
 import AddRowModal from './modalpage/modalPage';
@@ -8,7 +7,8 @@ const AdminPage = () => {
   const [tableData, setTableData] = useState([
     {
       id: 1,
-      source: 'AWS',
+      name: '1',
+      type: 'AWS',
       details: '1.2.3.4',
       descrip: 'new'
     }
@@ -48,6 +48,11 @@ const AdminPage = () => {
     {
       name: 'Details',
       selector: row => row.details,
+      sortable: true
+    },
+    {
+      name: 'Description',
+      selector: row=> row.descrip,
       sortable: true
     },
     {
