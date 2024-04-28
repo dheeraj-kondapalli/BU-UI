@@ -1,0 +1,27 @@
+.sidebar-container{
+    width: 15vw;
+    height: 100%;
+    background-color: dimgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 10px;
+}
+.sidebar-container a{
+    font-size: larger;
+    color: white;
+    background-color: black;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-container a:hover{
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}

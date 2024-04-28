@@ -1,0 +1,27 @@
+.navbar{
+    height: 10vh;
+    display: flex;
+}
+.container-fluid{
+    height: 10vh;
+}
+.icon{
+    margin-left: auto !important;
+    margin-right: 20px;
+    scale: 1.3;
+    padding: 5px;
+    border: 1px black solid;
+    border-radius: 50%;
+}
+.box a{
+    font-size: x-large;
+    color: black;
+    padding: 0;
+    margin-bottom: 0;
+    margin-right: 50px;
+}
+.logo{
+    margin-left: 100px;
+    margin-right: 300px !important;
+    font-size: x-large !important;
+}

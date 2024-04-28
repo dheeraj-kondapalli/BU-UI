@@ -1,0 +1,39 @@
+.modal-content{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+}
+.modal-header{
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-between;
+}
+.modal-header h3{
+    margin-bottom: 0;
+    margin-right: 50px;
+}
+.save-btn{
+    margin: 30px;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
