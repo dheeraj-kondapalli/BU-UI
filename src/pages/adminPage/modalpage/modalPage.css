@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
 }
 .modal{
     height: 100%;
@@ -22,23 +24,41 @@
 }
 .modal-header{
     flex-direction: row;
-    width: inherit;
+    width: 100%;
+    padding: 15px 20px 15px 40px;
     justify-content: space-between;
+    background-color: rgb(0,46,212);
+    color: white;
 }
 .modal-header h3{
     margin-bottom: 0;
     margin-right: 50px;
 }
+.modal-header button{
+    border-radius: 50px;
+    padding: 5px 9px;
+    background-color: rgb(0,46,212);
+}
 .save-btn{
-    margin: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    background-color: rgb(0,46,212);
 }
 .form-group{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 10px;
 }
 .form-group select{
-    font-size: large;
-    width: inherit;
+    font-size: medium;
+    width: auto;
     padding: 0 17px 0 0;
+}
+.form-group input{
+    width: 60%;
+}
+.form-group input:active{
+    border: none;
 }

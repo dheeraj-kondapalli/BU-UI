@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DataTable from 'react-data-table-component';
 import AddRowModal from './modalpage/modalPage';
+import { DeleteTwoTone } from '@ant-design/icons';
 import './adminPage.css';
 
 const AdminPage = () => {
@@ -57,7 +58,7 @@ const AdminPage = () => {
     },
     {
       name: 'Actions',
-      cell: row => <button onClick={() => removeRow(row.id)}>Delete</button>
+      cell: row => <button className='delete' onClick={() => removeRow(row.id)}><DeleteTwoTone className='delicon'/></button>
     }
   ];
 
@@ -67,15 +68,15 @@ const AdminPage = () => {
         <h2>admin</h2>
         <button onClick={openModal}>+ Add File</button>
       </div>
-      <div className='table'>
-      <DataTable
-        columns={columns}
-        data={tableData}
-        selectableRows
-        fixedHeader
-        pagination
-      />
-      </div>
+        <DataTable
+          className='table'
+          columns={columns}
+          data={tableData}
+          selectableRows
+          fixedHeader
+          pagination
+        />
+
       <AddRowModal isOpen={isModalOpen} onClose={closeModal} onSave={addRow} />      
     </div>
   );

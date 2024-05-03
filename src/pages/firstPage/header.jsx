@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import HeaderDrag from '../../components/dnd/dragndrop';
+import { ArrowRightOutlined } from '@ant-design/icons';
 import './header.css'
 import * as XLSX from 'xlsx';
 
@@ -44,7 +45,7 @@ function Header() {
 
     <div className="one" >
       <div className='admin-container' style={{ display: isVisible ? 'flex' : 'none' }}>
-      <h3>Select a File source</h3>
+      <div className='admin-container-header'><h3>Select a File source</h3></div>
       <div className='input-box'>
         <div className='select-field'>
         <select id="source" name="source" value={selectedValue} onChange={handleChange}>
@@ -54,7 +55,7 @@ function Header() {
         <option value="NAS">NAS</option>
         <option value="NDM">NDM</option>
       </select>
-      <button>go</button>
+      <button><ArrowRightOutlined /></button>
       </div>
       <h4>or</h4>
       <div {...getRootProps()} className="dropzone" style={{ display: isVisible ? 'flex' : 'none' }}>

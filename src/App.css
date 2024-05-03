@@ -3,3 +3,20 @@
   flex-direction: column;
   width: 100%;
 }
+input{
+  background-color: rgb(243,245,251) !important;
+  color: black;
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+}
+.input:focus{
+  outline-color: rgb(100, 99, 99) !important;
+}
+select{
+  background-color: rgb(243,245,251) !important;
+  color: black;
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+}

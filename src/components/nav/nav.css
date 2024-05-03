@@ -1,6 +1,7 @@
 .navbar{
     height: 10vh;
     display: flex;
+    box-shadow: 0 4px 8px 0 rgba(103, 103, 103, 0.3);
 }
 .container-fluid{
     height: 10vh;
@@ -10,8 +11,10 @@
     margin-right: 20px;
     scale: 1.3;
     padding: 5px;
-    border: 1px black solid;
+    border: 1px rgb(0,46,212) solid;
     border-radius: 50%;
+    background-color: rgb(235,239,255);
+    color: rgb(0,46,212);
 }
 .box a{
     font-size: x-large;

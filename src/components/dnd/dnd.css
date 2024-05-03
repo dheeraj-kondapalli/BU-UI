@@ -1,14 +1,16 @@
 .two{
     display: flex;
     flex-direction: column;
-    width: inherit;
+    width: 85vw;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 }
 .columns-container{
     display: flex;
     flex-direction: row;
+    overflow-x: auto;
 }
 .column{
     display: flex;
@@ -16,17 +18,29 @@
     align-items: center;
     width: 300px;
     box-shadow: outset;
-    background-color: bisque;
+    background-color: white;
     margin: 15px;
-    padding: 20px;
     border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+.column-header{
+    background-color: rgb(0,46,212);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    border-radius: 20px 20px 0px 0px;
+}
+.column-header h3{
+    margin: 0;
 }
 .list a{
     color: black !important;
-    background-color: cadetblue;
-    margin: 4%;
+    background-color: rgb(249,250,255);
     padding: 10px;
-    border: 1px solid #000;
     border-radius: 15px;
 }
 .column ul{
@@ -34,14 +48,38 @@
     flex-direction: column;
     margin-top: 10px;
     padding: 10px;
-    height: 330px;
+    height: 50vh;
     width: 260px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
+.list::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.list::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+    border-radius: 30px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 30px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
+
 .resetbtn{
     width: 100px;
-    margin: 15px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: rgb(0,46,212);
 }
-.lists{
-    gap: 10px;
+.list{
+    gap: 15px;
+}
+.list input{
+    height: 50px;
+    padding: 6px;
 }

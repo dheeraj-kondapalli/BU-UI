@@ -12,11 +12,60 @@
     width: 100%;
     padding: 50px;
 }
-.table{
+.delete{
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+}
+.delete:hover{
+    border: none;
+}
+.delicon{
+    scale: 1.5;
+}
+.topcontainer button{
+    background-color: rgb(0,46,212) !important;
+    color: white;
+    border-radius: 10px;
+}
+.table {
     font-size: large;
-    width: 70vw;
-    border: 1px solid;
-    border-radius: 20px;
-    overflow: hidden;
+    width: 80% !important;
+    border: 1px solid rgb(212,218,235);
+    border-radius: 20px !important;
+    overflow-y: auto;
+}
+[role="table"]{
+    background-color: rgb(250,251,253) !important;
+}
+[role="columnheader"] {
+    /* Your styles here */
+    justify-content: center !important;
+    font-size: 15px;
+}
+[role="cell"] {
+    /* Your styles here */
+    justify-content: center;
+    font-size: 12px;
+}
+.table select{
+    color: black;
+}
+/* For WebKit browsers (Chrome, Safari, etc.) */
+.table::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.table::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+.table::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    height: 50px;
+}
+
+.table::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
 }
 

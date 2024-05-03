@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CloseOutlined } from '@ant-design/icons';
 import './modalPage.css'
 
 const AddRowModal = ({ isOpen, onClose, onSave }) => {
@@ -34,7 +35,7 @@ const AddRowModal = ({ isOpen, onClose, onSave }) => {
       <div className="modal-content">
         <div className='modal-header'>
           <h3>Enter the details</h3>
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClose}><CloseOutlined /></button>
         </div>
         <div className='form'>
           <div className= 'form-group'>

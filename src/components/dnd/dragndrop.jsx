@@ -89,7 +89,9 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
             onDragOver={(e) => handleDragOver(e)}
             onDrop={(e) => handleDrop(e, column.id, column.index)}
           >
+            <div className='column-header'>
             <h3 className='title'>{column.title}</h3>
+            </div>
             <ul className='list' draggable>
               {column.items.map((item, index) => (
                 <a
@@ -102,8 +104,10 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
           </div>
         ))}
         <div className='column' style={{ display: (!renderSecondColumn) ? 'none' : 'flex' }}>
+          <div className='column-header'>
           <h3>Final Column</h3>
-          <ul className='lists'>
+          </div>
+          <ul className='list'>
             <label htmlFor='name'>Column:</label>
             <input id='name' placeholder='Name'/>
             <input id='value' placeholder='Value'/>
@@ -120,7 +124,7 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
         </div>
       </div>
       {!renderSecondColumn && (
-        <button onClick={handleButtonClick}>all good</button>
+        <button className='resetbtn' onClick={handleButtonClick}>all good</button>
       )}
       <button className='resetbtn' onClick={handleReset}>reUpload</button>
     </div>
