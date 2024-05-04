@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { PlusOutlined } from '@ant-design/icons';
 import './dnd.css'
 
 function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
@@ -20,6 +21,19 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
     setRenderSecondColumn(false);
     console.log(filter)
   }
+  const [fields, setFields] = useState([{ id: 1, name: '', value: '' }]);
+
+  const addField = () => {
+    const newField = { id: fields.length + 1, name: '', value: '' };
+    setFields([...fields, newField]);
+  };
+
+  const handleFieldChange = (id, field, value) => {
+    const updatedFields = fields.map(field =>
+      field.id === id ? { ...field, [field]: value } : field
+    );
+    setFields(updatedFields);
+  };
 
   useEffect(() => {
     console.log('executed')
@@ -108,19 +122,25 @@ function HeaderDrag({ dragColumn, isVisible, toggleVisibility  }) {
           <h3>Final Column</h3>
           </div>
           <ul className='list'>
-            <label htmlFor='name'>Column:</label>
-            <input id='name' placeholder='Name'/>
-            <input id='value' placeholder='Value'/>
-            <label htmlFor='name'>Column:</label>
-            <input id='name' placeholder='Name'/>
-            <input id='value' placeholder='Value'/>
-            <label htmlFor='name'>Column:</label>
-            <input id='name' placeholder='Name'/>
-            <input id='value' placeholder='Value'/>
-            <label htmlFor='name'>Column:</label>
-            <input id='name' placeholder='Name'/>
-            <input id='value' placeholder='Value'/>
+          {fields.map(field => (
+          <li className='item' key={field.id}>
+            <label htmlFor={`name-${field.id}`}>Column:</label>
+            <input
+              id={`name-${field.id}`}
+              placeholder='Name'
+              value={field.name}
+              onChange={e => handleFieldChange(field.id, 'name', e.target.value)}
+            />
+            <input
+              id={`value-${field.id}`}
+              placeholder='Value'
+              value={field.value}
+              onChange={e => handleFieldChange(field.id, 'value', e.target.value)}
+            />
+          </li>
+        ))}
           </ul>
+          <button className='addbtn' onClick={addField}><PlusOutlined /></button>
         </div>
       </div>
       {!renderSecondColumn && (
